@@ -21,3 +21,18 @@ The approach is composed in multiple steps:
 - Definition of level for each test, to prioritize test cases
 - Defect management
 
+
+Responsability
+
+Priority of test cases
+
+## Test cases
+
+### Add an employee
+Description:
+
+
+### Add a team
+Description:
+
+
