@@ -111,7 +111,12 @@ This test case can be verified with other data management such as database reset
 
 **Descrption:** when trying to connect to the website via FTP or SSH, a welcome message should not mention the tech stack versions because this information can be used to perform attacks on vulnerable versions.
 
-## Issue creation strategy
+## Decisions on issue creation strategy
 
 We have created multiple labels according to the issue type (UI/UX for frontend, bug for backend, security). We have also defined some priority levels.  
 In our issues, we always write the actual behavior and the expected behavior, the affected version(s) and the reproductibility (random, systematic).  
+
+## Questions we ask ourselves
+
+- What are the business rules of this website? Its requirements?
+- Is it a real website used in production or a simple project?
