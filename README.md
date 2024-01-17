@@ -1,5 +1,12 @@
 # Test plan for Q Team
 
+- Aliaa ALBORHAMY
+- Daniel AGUIAR
+- Xing CHEN
+- Antoine DESPRÉS
+- Aurélien DUVAL
+- Victorin HUET
+
 ## Overview of the site
 This test plan is about defining the scope, the objectives and the test strategy of the [Q team's HR Database](https://q.hr.dmerej.info/).
 
