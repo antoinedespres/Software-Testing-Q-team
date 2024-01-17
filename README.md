@@ -83,6 +83,9 @@ It should bot be possible to a create a team with the same name as an existing o
 ### See all teams
 **Description:** all the teams must be displayed, with their names, action (view members) and delete button.
 
+#### View members of a team
+**Description:** when viewing the list of members of the team, the user should see all the names of the members, and be able to remove a member from the team.
+
 ### Delete a team
 **Description:** when clicking on "Delete" button in the list of teams, a page should be opened asking for the user to proceed. \
 On proceed, the team should be deleted and all employees should be left without team.
