@@ -1,7 +1,7 @@
 # Test plan for Q Team
 
 ## Overview of the site
-This test plan is about 
+This test plan is about defining the scope, the objectives and the test strategy of the [Q team's HR Database](https://q.hr.dmerej.info/).
 
 ## Scope of testing
 - Manual testing
