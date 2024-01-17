@@ -110,3 +110,8 @@ This test case can be verified with other data management such as database reset
 ### Server signatures / FTP or SSH connection
 
 **Descrption:** when trying to connect to the website via FTP or SSH, a welcome message should not mention the tech stack versions because this information can be used to perform attacks on vulnerable versions.
+
+## Issue creation strategy
+
+We have created multiple labels according to the issue type (UI/UX for frontend, bug for backend, security). We have also defined some priority levels.  
+In our issues, we always write the actual behavior and the expected behavior, the affected version(s) and the reproductibility (random, systematic).  
