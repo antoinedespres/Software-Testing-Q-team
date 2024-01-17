@@ -17,7 +17,7 @@ All tests done, will ensure that the site meets its functionnal and technicals r
 ## Test strategy
 ### Used approach
 The approach is composed in multiple steps:
--> Responsability of test level
--> Definition of level for each test, to prioritize test cases
--> Defect management
+- Responsability of test level
+- Definition of level for each test, to prioritize test cases
+- Defect management
 
