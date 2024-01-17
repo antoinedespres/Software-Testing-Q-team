@@ -98,3 +98,15 @@ When proceeding, the database should be resetted and the user should be redirect
 **Description:** when deleting an employee on laptop A, another user on laptop B should not be able to delete the same employee. \
 An error message should be displayed to the user indicating that this employee does not exist. \
 This test case can be verified with other data management such as database reset or deleting a team.
+
+### SQL injection
+
+**Description:** when filling some text fields, SQL queries written by a malicious actor should not be processed.  
+
+### HTML/JS injection
+
+**Description:** when filling some text fields, HTML and JS tags written by a malicious actor should not be processed.
+
+### Server signatures / FTP or SSH connection
+
+**Descrption:** when trying to connect to the website via FTP or SSH, a welcome message should not mention the tech stack versions because this information can be used to perform attacks on vulnerable versions.
