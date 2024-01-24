@@ -23,7 +23,7 @@ export class EmployeeListPageModel extends GlobalPageModel {
     return this.getRow(rowIndex).locator("td > a");
   }
 
-  async getRowCell(index: number, cellIndex: number): Promise<Locator> {
+  getRowCell(index: number, cellIndex: number): Locator {
     return this.table.locator(
       `tbody > tr:nth-child(${index}) > td:nth-child(${cellIndex})`
     );
