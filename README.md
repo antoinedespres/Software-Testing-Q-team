@@ -135,3 +135,5 @@ Here are the logs for this session:
 - We added new Page Object Model for pages, creating various functions in the different models to simplify the tests and avoid redundancy.
 - Based on these models, we refactored the two first tests.
 - Finally, new tests were added.
+- Given the fact that the website is written in Django, we asked ourselves whether it would be better to use the id or the name of a tag to identify it in our code. The "name" is more stable and allows to make the link with the backend whereas the id is almost never used, except for css.
+- We also asked ourselves how to test that two employees cannot be created with a same email. To avoid conflicts with emails already in the database, we have chosen to generate a UUID in our test file to create the two employees.
