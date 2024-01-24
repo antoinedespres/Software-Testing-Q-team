@@ -1,4 +1,4 @@
-import { test } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 import { AddEmployeePageModel } from "../pageModels/add-employee-page-model";
 
 test("Add an employee should add the employee to the list", async ({
@@ -16,6 +16,13 @@ test("Add an employee should add the employee to the list", async ({
   );
 
   await addEmployeePage.clickOnAddButton();
+  expect(addEmployeePage.isTheSamePage()).toBe(false);
+  expect(page.url()).toBe("https://q.hr.dmerej.info/employees");
 
-  await page.getByRole("cell", { name: "daniel@gmail.com" }).last();
+  const emailCell = page
+    .locator("table > tbody > tr")
+    .last()
+    .locator("td", { hasText: "daniel@gmail.com" });
+
+  expect(emailCell).toBeTruthy();
 });
