@@ -118,9 +118,22 @@ This test case can be verified with other data management such as database reset
 ## Decisions on issue creation strategy
 
 We have created multiple labels according to the issue type (UI/UX for frontend, bug for backend, security). We have also defined some priority levels.  
-In our issues, we always write the actual behavior and the expected behavior, the affected version(s) and the reproductibility (random, systematic).  
+In our issues, we always write the actual behavior and the expected behavior, the affected version(s) and the reproductibility (random, systematic).
 
 ## Questions we ask ourselves
 
 - What are the business rules of this website? Its requirements?
 - Is it a real website used in production or a simple project?
+
+## Logs (24/01/2024):
+
+After the first session where we had to test the website manually, the goal of this session is to use a tool named **Playwright** to realize automatically the tests on the rmote website.\
+Here are the logs for this session:
+- We created a test using the record function provided by the tool. This test was expecting the add of a new employee to work correctly.
+- Then, we refactored this test as the record tool generates a new line of code for each action, even when moving the cursos with arrows.
+- When the test was successfull, we created a new test to verify that the ZIP code should always be positive when creating a new employee. This test failed as the bug was not fixed in version 1.0.4.
+- We added new Page Object Model for pages, creating various functions in the different models to simplify the tests and avoid redundancy.
+- Based on these models, we refactored the two first tests.
+- Finally, new tests were added.
+- Given the fact that the website is written in Django, we asked ourselves whether it would be better to use the id or the name of a tag to identify it in our code. The "name" is more stable and allows to make the link with the backend whereas the id is almost never used, except for css.
+- We also asked ourselves how to test that two employees cannot be created with a same email. To avoid conflicts with emails already in the database, we have chosen to generate a UUID in our test file to create the two employees.
