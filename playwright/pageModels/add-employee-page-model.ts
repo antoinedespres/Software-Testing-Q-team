@@ -1,6 +1,7 @@
 import { Locator, Page } from "@playwright/test";
+import { GlobalFormPageModel } from "./global-form-page-model";
 
-export class AddEmployeePageModel {
+export class AddEmployeePageModel extends GlobalFormPageModel {
   readonly page: Page;
   readonly nameInput: Locator;
   readonly emailInput: Locator;
@@ -11,18 +12,15 @@ export class AddEmployeePageModel {
   readonly jobTitleInput: Locator;
 
   constructor(page: Page) {
+    super(page, "https://q.hr.dmerej.info/add_employee");
     this.page = page;
-    this.nameInput = page.locator("#id_name");
-    this.emailInput = page.locator("#id_email");
-    this.addressInput = page.locator("#id_address_line1");
-    this.cityInput = page.locator("#id_city");
-    this.zipCodeInput = page.locator("#id_zip_code");
-    this.hiringDateInput = page.locator("#id_hiring");
-    this.jobTitleInput = page.locator("#id_job_title");
-  }
-
-  async goToPage() {
-    await this.page.goto("https://q.hr.dmerej.info/add_employee");
+    this.nameInput = this.getByName("name");
+    this.emailInput = this.getByName("email");
+    this.addressInput = this.getByName("address_line1");
+    this.cityInput = this.getByName("city");
+    this.zipCodeInput = this.getByName("zip_code");
+    this.hiringDateInput = this.getByName("hiring_date");
+    this.jobTitleInput = this.getByName("job_title");
   }
 
   async fillForm(
@@ -41,5 +39,9 @@ export class AddEmployeePageModel {
     await this.zipCodeInput.fill(zipCode);
     await this.hiringDateInput.fill(hiringDate);
     await this.jobTitleInput.fill(jobTitle);
+  }
+
+  async clickOnAddButton() {
+    await this.page.locator("button", { hasText: "Add" }).click();
   }
 }
